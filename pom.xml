@@ -60,7 +60,13 @@
         <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-function-adapter-aws</artifactId>
-		</dependency>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.annotation</groupId>
+					<artifactId>jakarta.annotation-api</artifactId>
+				</exclusion>
+			</exclusions>
+        </dependency>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-lambda-java-events</artifactId>
@@ -74,7 +80,13 @@
         <dependency>
 		    <groupId>com.amazonaws</groupId>
 		    <artifactId>aws-java-sdk-secretsmanager</artifactId>
-		</dependency>
+		    <exclusions>
+		    	<exclusion>
+		    		<groupId>commons-logging</groupId>
+		    		<artifactId>commons-logging</artifactId>
+		    	</exclusion>
+		    </exclusions>
+        </dependency>
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -91,7 +103,13 @@
         <dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>      
+		    <exclusions>
+		    	<exclusion>
+		    		<groupId>jakarta.persistence</groupId>
+		    		<artifactId>jakarta.persistence-api</artifactId>
+		    	</exclusion>
+		    </exclusions>
+        </dependency>      
 		<dependency>
 		    <groupId>org.springframework.data</groupId>
 		    <artifactId>spring-data-jpa</artifactId>
@@ -105,7 +123,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+			<exclusions>
+				<exclusion>
+					<groupId>jakarta.activation</groupId>
+					<artifactId>jakarta.activation-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>jakarta.xml.bind</groupId>
+					<artifactId>jakarta.xml.bind-api</artifactId>
+				</exclusion>
+			</exclusions>
+        </dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -122,6 +150,22 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
+		    <exclusions>
+		    	<exclusion>
+		    		<groupId>org.jboss.spec.javax.transaction</groupId>
+		    		<artifactId>
+		    			jboss-transaction-api_1.2_spec
+		    		</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		<groupId>com.sun.activation</groupId>
+		    		<artifactId>jakarta.activation</artifactId>
+		    	</exclusion>
+		    	<exclusion>
+		    		<groupId>jakarta.xml.bind</groupId>
+		    		<artifactId>jakarta.xml.bind-api</artifactId>
+		    	</exclusion>
+		    </exclusions>
 		</dependency>
 		<dependency>
 		    <groupId>org.javassist</groupId>
@@ -157,6 +201,9 @@
                       </execution>
                     </executions>
                   </plugin>
+                
+ 
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>

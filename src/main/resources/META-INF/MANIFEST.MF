@@ -1,8 +1,7 @@
 Manifest-Version: 1.0
 Created-By: Maven JAR Plugin 3.2.2
 Build-Jdk-Spec: 11
-Implementation-Title: A sample Java Spring web service created with AWS 
- CodeStar.
+Implementation-Title: A sample Java Spring web service created with AWS CodeStar.
 Implementation-Version: 1.0
 Main-Class: com.r2dsolution.comein.pegasus.PegasusApplication
 

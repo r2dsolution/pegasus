@@ -5,3 +5,5 @@ target/*
 /.settings/*
 /.aws-sam/
 /target/
+/.factorypath
+/dependency-reduced-pom.xml
