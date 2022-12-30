@@ -1,6 +1,3 @@
-org.springframework.context.ApplicationContextInitializer=\
-org.springframework.cloud.function.adapter.aws.CustomRuntimeInitializer
-org.springframework.boot.env.EnvironmentPostProcessor=\
-org.springframework.cloud.function.adapter.aws.CustomRuntimeEnvironmentPostProcessor
-org.springframework.boot.env.EnvironmentPostProcessor=\
-com.r2dsolution.comein.pegasus.processor.SecretManagerProcessor
+org.springframework.context.ApplicationContextInitializer=org.springframework.cloud.function.adapter.aws.CustomRuntimeInitializer
+org.springframework.boot.env.EnvironmentPostProcessor=org.springframework.cloud.function.adapter.aws.CustomRuntimeEnvironmentPostProcessor
+org.springframework.boot.env.EnvironmentPostProcessor=com.r2dsolution.comein.pegasus.processor.SecretManagerProcessor
