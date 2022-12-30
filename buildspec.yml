@@ -18,6 +18,8 @@ phases:
       - mv target/pegasus-1.0.1-0.jar .
       - unzip pegasus-1.0.1-0.jar
       - rm -rf target tst src buildspec.yml pom.xml pegasus-1.0.1-0.jar
+      - cat META-INF/MANIFEST.MF
+      - cat META-INF/spring.factories
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template template-export.yml
   post_build:
     commands:
